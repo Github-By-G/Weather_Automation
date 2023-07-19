@@ -21,3 +21,5 @@ For wind:
   
 For pressure:
 - Taking from  "main" dictionary  finding pressure  "data['main']['pressure']"
+
+![Output](https://github.com/Mr-barnes/Weather_Automation/assets/83700543/d287ba58-e505-40a0-8c6f-54ee6a61232a)
