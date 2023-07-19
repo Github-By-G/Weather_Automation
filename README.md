@@ -15,7 +15,9 @@ By extracting the data in the list
 
 For temperature:
 - Taking from "main" dictionary  finding temp "data['main']['temp']"
+  
 For wind:
 - Taking from "wind" dictionary  finding speed "data['wind']['speed']"
+  
 For pressure:
 - Taking from  "main" dictionary  finding pressure  "data['main']['pressure']"
