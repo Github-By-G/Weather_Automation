@@ -9,17 +9,17 @@ f = open("./z.json", "r")
 
 def get_temperature():
     date_input = input("Enter the date (YYYY-MM-DD): ")
-    
-    # response = requests.get(API_url)
-    # if response.status_code == 200:
+    # response = requests.get(API_url)  #using API
+    # # if response.status_code == 200:    #when server HTTP is successful
     #     temp_data = response.json()
     response = json.load(f)
     temp_data = response
+    found_data = False
     for data in temp_data["list"]:
         if data["dt_txt"].startswith(date_input):
-            print(f"Temperature on {date_input}: {data['main']['temp']}")
-            return
-    print("No temperature data found for the given date.")
-    return
-            # else:
-        #      print("Failed to temperature weather data.")
+            print(f"Temperature on {data['dt_txt']}: {data['main']['temp']}")
+            found_data = True
+    if not found_data:
+        print("No temperature data found for the given date.")
+        # else:
+        #     print("Failed to retrieve temperature data.")

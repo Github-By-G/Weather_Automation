@@ -6,9 +6,9 @@ def get_pressure():
     date_input = input("Enter the date (YYYY-MM-DD): ")
     response = requests.get(API_url)
     if response.status_code == 200:
-        weather_data = response.json()
+        pressure_data = response.json()
         found_data = False
-        for data in weather_data["list"]:
+        for data in pressure_data["list"]:
             if data["dt_txt"].startswith(date_input):
                 print(f"Pressure on {data['dt_txt']}: {data['main']['pressure']}")
                 found_data = True
